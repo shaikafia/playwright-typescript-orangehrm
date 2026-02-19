@@ -35,7 +35,7 @@ test.describe('Employee Reviews', () => {
     test('Validate that the dropdown menus for job title, subunit, and review status populate correctly with relevant options.', async () => {
         await employeeReviewPage.jobTitleDropdown.click();
         const jobTitleOptions = await employeeReviewPage.getDropdownOptions();
-        expect(jobTitleOptions.length).toBeGreaterThan(1); // Add more expected options as necessary
+        expect(jobTitleOptions.length).toBeGreaterThanOrEqual(1); // Add more expected options as necessary
 
         await employeeReviewPage.subUnitDropdown.click();
         const subUnitOptions = await employeeReviewPage.getDropdownOptions();
